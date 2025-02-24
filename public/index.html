@@ -209,7 +209,7 @@
               class="bg-[#F5F5F5] rounded-3xl p-8 relative transform hover:scale-[1.02] transition-transform duration-300"
             >
               <img
-                src="/eu.jfif"
+                src="eu.jfif"
                 alt="Desenvolvedor trabalhando"
                 class="rounded-2xl w-full h-[600px] object-cover"
               />
@@ -334,169 +334,178 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-16 animate-on-scroll">
           <div
-            class="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full mb-6"
+            class="inline-block bg-primary-100 text-primary-600 px-4 py-2 rounded-full mb-6"
           >
-            Portfólio
+            Projetos em Destaque
           </div>
           <h2 class="text-4xl font-bold text-gray-900 mb-4">
-            Projetos em Destaque
+            Trabalhos Recentes
           </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Conheça alguns dos meus principais projetos desenvolvidos com React,
-            Node.js e outras tecnologias modernas.
+          <p class="text-gray-600 text-lg">
+            Conheça alguns dos projetos que desenvolvi recentemente
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Projeto 1 -->
+          <!-- Projeto Pizzaria -->
           <div
-            class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:rotate-1 animate-on-scroll"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:-translate-y-2 animate-on-scroll"
           >
             <div class="relative">
               <img
-                src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000"
-                alt="Plataforma Educacional"
-                class="w-full h-64 object-cover"
+                src="images/pizza.jfif"
+                alt="Pizzaria Delícia"
+                class="w-full h-48 object-cover"
+                onerror="this.src='https://via.placeholder.com/400x300?text=Pizzaria+Delícia'"
               />
-              <div
-                class="absolute top-4 right-4 bg-white rounded-full px-4 py-2 text-sm font-medium text-gray-900"
-              >
-                Web App
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-primary-500 text-white px-3 py-1 rounded-full text-sm"
+                >
+                  Landing Page
+                </span>
               </div>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Plataforma Educacional
+                Pizzaria Delícia
               </h3>
               <p class="text-gray-600 mb-4">
-                Sistema completo de gestão educacional com recursos de
-                aprendizagem online, avaliações e acompanhamento de alunos.
+                Landing page moderna para pizzaria com cardápio digital, sistema
+                de pedidos e design responsivo.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm"
-                  >React</span
-                >
-                <span
-                  class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm"
-                  >Node.js</span
-                >
-                <span
-                  class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm"
-                  >PostgreSQL</span
-                >
-              </div>
-              <a
-                href="#"
-                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
-              >
-                Ver Projeto <i class="fas fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Projeto 2 -->
-          <div
-            class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:rotate-1 animate-on-scroll"
-          >
-            <div class="relative">
-              <img
-                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1000"
-                alt="Sistema de Gestão"
-                class="w-full h-64 object-cover"
-              />
-              <div
-                class="absolute top-4 right-4 bg-white rounded-full px-4 py-2 text-sm font-medium text-gray-900"
-              >
-                Full Stack
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Sistema de Gestão
-              </h3>
-              <p class="text-gray-600 mb-4">
-                Aplicação web para gestão empresarial com módulos de finanças,
-                estoque e relatórios em tempo real.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm"
-                  >Next.js</span
-                >
-                <span
-                  class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm"
-                  >NestJS</span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >HTML5</span
                 >
                 <span
                   class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
-                  >TypeScript</span
+                  >TailwindCSS</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >JavaScript</span
                 >
               </div>
               <a
-                href="#"
-                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+                href="https://landing-pizzaria-zeta.vercel.app/"
+                target="_blank"
+                class="text-primary-500 hover:text-primary-600 font-medium flex items-center group"
               >
-                Ver Projeto <i class="fas fa-arrow-right ml-2"></i>
+                Ver Projeto
+                <i
+                  class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"
+                ></i>
               </a>
             </div>
           </div>
 
-          <!-- Projeto 3 -->
+          <!-- Projeto Pet.om -->
           <div
-            class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:rotate-1 animate-on-scroll"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:-translate-y-2 animate-on-scroll"
           >
             <div class="relative">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000"
-                alt="API REST"
-                class="w-full h-64 object-cover"
+                src="images/pet.jfif"
+                alt="Pet.om Veterinária"
+                class="w-full h-48 object-cover"
+                onerror="this.src='https://via.placeholder.com/400x300?text=Pet.om+Veterinária'"
               />
-              <div
-                class="absolute top-4 right-4 bg-white rounded-full px-4 py-2 text-sm font-medium text-gray-900"
-              >
-                Backend
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-primary-500 text-white px-3 py-1 rounded-full text-sm"
+                >
+                  Landing Page
+                </span>
               </div>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                API REST Escalável
+                Pet.om Veterinária
               </h3>
               <p class="text-gray-600 mb-4">
-                API RESTful desenvolvida com Node.js e Express, implementando
-                boas práticas e padrões de projeto.
+                Site institucional para clínica veterinária com agendamento
+                online, blog e área do cliente.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm"
-                  >Node.js</span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >HTML5</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm"
-                  >Express</span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >TailwindCSS</span
                 >
                 <span
-                  class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm"
-                  >MongoDB</span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >JavaScript</span
                 >
               </div>
               <a
-                href="#"
-                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+                href="https://landing-veterinaria.vercel.app/"
+                target="_blank"
+                class="text-primary-500 hover:text-primary-600 font-medium flex items-center group"
               >
-                Ver Projeto <i class="fas fa-arrow-right ml-2"></i>
+                Ver Projeto
+                <i
+                  class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"
+                ></i>
               </a>
             </div>
           </div>
-        </div>
 
-        <div class="text-center mt-12">
-          <a
-            href="#"
-            class="inline-block border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-900 hover:text-white transition duration-300"
+          <!-- Projeto Burger House -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:-translate-y-2 animate-on-scroll"
           >
-            Ver Todos os Projetos
-          </a>
+            <div class="relative">
+              <img
+                src="images/hamburg.jfif"
+                alt="Burger House"
+                class="w-full h-48 object-cover"
+                onerror="this.src='https://via.placeholder.com/400x300?text=Burger+House'"
+              />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-primary-500 text-white px-3 py-1 rounded-full text-sm"
+                >
+                  Landing Page
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Burger House</h3>
+              <p class="text-gray-600 mb-4">
+                Landing page para hamburgueria com cardápio interativo, sistema
+                de delivery e área de promoções.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >HTML5</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >TailwindCSS</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >JavaScript</span
+                >
+              </div>
+              <a
+                href="https://landing-hamburgueria.vercel.app/"
+                target="_blank"
+                class="text-primary-500 hover:text-primary-600 font-medium flex items-center group"
+              >
+                Ver Projeto
+                <i
+                  class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"
+                ></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
