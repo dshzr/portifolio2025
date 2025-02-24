@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellington Santiago - Desenvolvedor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+              secondary: {
+                50: '#fdf4ff',
+                100: '#fae8ff',
+                200: '#f5d0fe',
+                300: '#f0abfc',
+                400: '#e879f9',
+                500: '#d946ef',
+                600: '#c026d3',
+                700: '#a21caf',
+                800: '#86198f',
+                900: '#701a75',
+              },
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in',
+              'fade-in-up': 'fadeInUp 0.7s ease-out',
+              'fade-in-down': 'fadeInDown 0.7s ease-out',
+              'slide-in-left': 'slideInLeft 0.5s ease-out',
+              'slide-in-right': 'slideInRight 0.5s ease-out',
+              'bounce-slow': 'bounce 3s infinite',
+              float: 'float 3s ease-in-out infinite',
+              gradient: 'gradient 8s ease infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideInLeft: {
+                '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              slideInRight: {
+                '0%': { opacity: '0', transform: 'translateX(20px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              gradient: {
+                '0%, 100%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'left center',
+                },
+                '50%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'right center',
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+      }
+
+      .animate-on-scroll.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .accent-text {
+        color: #0ea5e9;
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(14, 165, 233, 0.1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      .hover-accent {
+        transition: all 0.3s ease;
+      }
+
+      .hover-accent:hover {
+        color: #0ea5e9;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-sm z-50 animate-fade-in-down">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-2xl font-bold accent-text">Wellington.</a>
+          <div class="hidden md:flex space-x-8">
+            <a href="#" class="hover-accent">Início</a>
+            <a href="#works" class="hover-accent">Trabalhos</a>
+            <a href="#about" class="hover-accent">Sobre mim</a>
+            <a href="#projects" class="hover-accent">Projetos</a>
+          </div>
+          <a
+            href="https://wa.me/5513996918986"
+            target="_blank"
+            class="bg-primary-500 text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition duration-300 flex items-center space-x-2"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <span>Vamos conversar</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-fade-in-up">
+            <div
+              class="inline-block bg-primary-100 px-4 py-2 rounded-full mb-6"
+            >
+              <span class="text-primary-600 font-medium"
+                >Consultor de Desenvolvimento & Full Stack</span
+              >
+            </div>
+            <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Olá! Eu sou<br />
+              <span class="text-primary-500">Wellington Santiago</span>
+            </h1>
+            <p class="text-gray-600 text-xl mb-8">
+              Desenvolvedor Full Stack com foco em React e Node.js<br />
+              Transformando ideias em soluções digitais inovadoras
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105"
+              >
+                Contrate-me
+              </a>
+              <a
+                href="#projects"
+                class="flex items-center text-gray-900 hover:text-gray-600 transition duration-300 group"
+              >
+                Projetos
+                <i
+                  class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"
+                ></i>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 mt-16 animate-fade-in">
+              <div>
+                <h3 class="text-4xl font-bold text-gray-900">3+</h3>
+                <p class="text-gray-600">Anos de<br />experiência</p>
+              </div>
+              <div>
+                <div class="flex items-center mb-4">
+                  <h4 class="text-gray-900 font-bold mr-4">Contato</h4>
+                </div>
+                <a
+                  href="https://wa.me/5513996918986"
+                  class="text-gray-600 hover:text-gray-900 flex items-center"
+                >
+                  <i class="fab fa-whatsapp mr-2"></i>
+                  (13) 99691-8986
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative animate-fade-in">
+            <div
+              class="bg-[#F5F5F5] rounded-3xl p-8 relative transform hover:scale-[1.02] transition-transform duration-300"
+            >
+              <img
+                src="/eu.jfif"
+                alt="Desenvolvedor trabalhando"
+                class="rounded-2xl w-full h-[600px] object-cover"
+              />
+              <div
+                class="absolute -right-4 top-1/4 bg-white p-4 rounded-xl shadow-lg animate-float"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  class="w-12 h-12 animate-spin-slow"
+                  style="animation: spin 8s linear infinite"
+                />
+              </div>
+              <div
+                class="absolute -left-4 top-1/2 bg-white p-4 rounded-xl shadow-lg animate-float"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  class="w-12 h-12 animate-spin-slow"
+                  style="animation: spin 8s linear infinite"
+                />
+              </div>
+              <div
+                class="absolute right-8 bottom-4 bg-white p-4 rounded-xl shadow-lg animate-float"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  class="w-12 h-12 animate-spin-slow"
+                  style="animation: spin 8s linear infinite"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mim Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="relative animate-on-scroll">
+            <div class="bg-blue-50 rounded-3xl p-8 relative">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000"
+                alt="Ambiente de desenvolvimento"
+                class="rounded-2xl w-full h-[600px] object-cover"
+              />
+              <div
+                class="absolute -right-6 top-1/3 bg-white p-6 rounded-2xl shadow-xl"
+              >
+                <div class="text-center">
+                  <p class="text-4xl font-bold text-gray-900 mb-2">3+</p>
+                  <p class="text-gray-600">Anos de<br />Experiência</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="animate-on-scroll">
+            <div
+              class="inline-block bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full mb-6"
+            >
+              Sobre Mim
+            </div>
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">
+              Consultor de Desenvolvimento & Especialista em Soluções Web
+            </h2>
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+              Atuo como Consultor de Desenvolvimento, trazendo anos de
+              experiência no desenvolvimento de software para ajudar empresas a
+              otimizar processos e alcançar seus objetivos estratégicos. Sou
+              apaixonado por ensinar e compartilhar conhecimento sobre a criação
+              de aplicações web e mobile, utilizando plataformas Low-code e
+              No-code.
+            </p>
+
+            <div class="grid grid-cols-2 gap-8 mb-8">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Frontend</h4>
+                <p class="text-gray-600">
+                  React.js, HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Mobile & Low-code</h4>
+                <p class="text-gray-600">Flutter, FlutterFlow, n8n</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Backend & Database</h4>
+                <p class="text-gray-600">MySQL, PDO, Supabase, POO</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Soft Skills</h4>
+                <p class="text-gray-600">
+                  Consultoria, Ensino, Liderança Técnica, Resolução de problemas
+                </p>
+              </div>
+            </div>
+
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition duration-300"
+              >
+                Baixar Currículo
+              </a>
+              <a
+                href="https://wa.me/5513996918986"
+                target="_blank"
+                class="border border-gray-300 px-8 py-4 rounded-lg hover:bg-gray-50 transition duration-300"
+              >
+                Contato
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos em Destaque Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate-on-scroll">
+          <div
+            class="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full mb-6"
+          >
+            Portfólio
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Projetos em Destaque
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Conheça alguns dos meus principais projetos desenvolvidos com React,
+            Node.js e outras tecnologias modernas.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Projeto 1 -->
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:rotate-1 animate-on-scroll"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000"
+                alt="Plataforma Educacional"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-white rounded-full px-4 py-2 text-sm font-medium text-gray-900"
+              >
+                Web App
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Plataforma Educacional
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Sistema completo de gestão educacional com recursos de
+                aprendizagem online, avaliações e acompanhamento de alunos.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm"
+                  >React</span
+                >
+                <span
+                  class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm"
+                  >PostgreSQL</span
+                >
+              </div>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                Ver Projeto <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 2 -->
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:rotate-1 animate-on-scroll"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1000"
+                alt="Sistema de Gestão"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-white rounded-full px-4 py-2 text-sm font-medium text-gray-900"
+              >
+                Full Stack
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Sistema de Gestão
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Aplicação web para gestão empresarial com módulos de finanças,
+                estoque e relatórios em tempo real.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm"
+                  >Next.js</span
+                >
+                <span
+                  class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm"
+                  >NestJS</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm"
+                  >TypeScript</span
+                >
+              </div>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                Ver Projeto <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 3 -->
+          <div
+            class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 hover:rotate-1 animate-on-scroll"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000"
+                alt="API REST"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-white rounded-full px-4 py-2 text-sm font-medium text-gray-900"
+              >
+                Backend
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                API REST Escalável
+              </h3>
+              <p class="text-gray-600 mb-4">
+                API RESTful desenvolvida com Node.js e Express, implementando
+                boas práticas e padrões de projeto.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm"
+                  >Express</span
+                >
+                <span
+                  class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm"
+                  >MongoDB</span
+                >
+              </div>
+              <a
+                href="#"
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                Ver Projeto <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-block border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-900 hover:text-white transition duration-300"
+          >
+            Ver Todos os Projetos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Links e Redes Sociais -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate-on-scroll">
+          <div
+            class="inline-block bg-primary-100 text-primary-600 px-4 py-2 rounded-full mb-6"
+          >
+            Conecte-se
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Vamos Trabalhar Juntos?
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Estou sempre aberto a novos projetos e oportunidades de colaboração.
+            Conecte-se comigo através das redes sociais ou me envie uma
+            mensagem.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto"
+        >
+          <a
+            href="https://github.com/dshzr"
+            target="_blank"
+            class="group animate-on-scroll"
+          >
+            <div
+              class="bg-white border border-gray-100 rounded-2xl p-8 text-center hover:border-primary-500 hover:shadow-lg transition duration-300 transform hover:scale-105 hover:-translate-y-1"
+            >
+              <i
+                class="fab fa-github text-4xl text-gray-900 mb-4 group-hover:text-primary-500"
+              ></i>
+              <h3 class="font-bold text-gray-900 mb-2">GitHub</h3>
+              <p class="text-gray-600">Veja meus códigos e contribuições</p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/wellington-santiago-dev/"
+            target="_blank"
+            class="group animate-on-scroll"
+          >
+            <div
+              class="bg-white border border-gray-100 rounded-2xl p-8 text-center hover:border-primary-500 hover:shadow-lg transition duration-300 transform hover:scale-105 hover:-translate-y-1"
+            >
+              <i
+                class="fab fa-linkedin text-4xl text-gray-900 mb-4 group-hover:text-primary-500"
+              ></i>
+              <h3 class="font-bold text-gray-900 mb-2">LinkedIn</h3>
+              <p class="text-gray-600">Conecte-se profissionalmente</p>
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/5513996918986"
+            target="_blank"
+            class="group animate-on-scroll"
+          >
+            <div
+              class="bg-white border border-gray-100 rounded-2xl p-8 text-center hover:border-primary-500 hover:shadow-lg transition duration-300 transform hover:scale-105 hover:-translate-y-1"
+            >
+              <i
+                class="fab fa-whatsapp text-4xl text-gray-900 mb-4 group-hover:text-primary-500"
+              ></i>
+              <h3 class="font-bold text-gray-900 mb-2">WhatsApp</h3>
+              <p class="text-gray-600">Me envie uma mensagem</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-8 md:mb-0">
+            <h2 class="text-2xl font-bold mb-2">Wellington Santiago</h2>
+            <p class="text-gray-400">Desenvolvedor Full Stack</p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="https://github.com/dshzr"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/wellington-santiago-dev/"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a
+              href="https://wa.me/5513996918986"
+              target="_blank"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2024 Wellington Santiago. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Adicione este script no final do body -->
+    <script>
+      // Animação on scroll
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, observerOptions);
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const animatedElements =
+          document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
